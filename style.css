@@ -1,0 +1,107 @@
+/* ==========================================
+   1. ОБЩИЕ НАСТРОЙКИ СТРАНИЦЫ И КОНТЕЙНЕРА
+   ========================================== */
+body {
+    background-color: #1e1e24; /* Стильная темная тема */
+    color: #f4f4f9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;          /* Включает магию Flexbox. Карточки мгновенно встанут в один ряд! */
+    justify-content: center; /* Выравнивает карточки ровно по центру экрана */
+    gap: 30px;              /* Делает красивый отступ в 30 пикселей между карточками */
+    flex-wrap: wrap;        /* Если экран телефона будет слишком узким, карточки аккуратно перенесутся друг под друга */
+}
+
+/* ==========================================
+   2. КОМПОНЕНТ: КАРТОЧКА (RESUME CARD)
+   ========================================== */
+.resume-card {
+    max-width: 350px; /* Ширина, чтобы две карточки легко помещались на экране */
+    background-color: #2a2a35;
+    margin: 20px 0;   
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный подъем карточки */
+}
+
+/* Анимация карточки при наведении */
+.resume-card:hover {
+    transform: translateY(-8px); /* Приподнимает карточку вверх на 8 пикселей */
+    box-shadow: 0 15px 35px rgba(0, 210, 255, 0.2); /* Тень подсвечивается синим */
+}
+
+/* Стили для изображения (круглый аватар) */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Сделает картинку идеально круглой */
+    object-fit: cover; 
+    border: 3px solid #00d2ff; /* Яркая неоновая рамка вокруг фото */
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   3. ТЕКСТ, ЗАГОЛОВКИ И СПИСКИ
+   ========================================== */
+h1 {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.subtitle {
+    color: #00d2ff; /* Синий неоновый подзаголовок */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #444;
+    margin: 20px 0;
+}
+
+h3 {
+    text-align: left; 
+    color: #fff;
+    margin-top: 20px;
+}
+
+ul {
+    text-align: left;
+    padding-left: 20px;
+    line-height: 1.8; 
+}
+
+/* Маленькие цветные плашки для тегов */
+.badge {
+    background-color: #3b3b4f;
+    color: #00d2ff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* ==========================================
+   4. ИНТЕРАКТИВ: ССЫЛКИ И ЭФФЕКТЫ ХОВЕРА
+   ========================================== */
+/* Базовое состояние для ВСЕХ ссылок на сайте */
+a {
+    color: #ff4375; /* Ваш выбранный розовый цвет */
+    text-decoration: none; /* Убираем стандартное подчеркивание в обычном состоянии */
+    font-weight: bold;
+    transition: color 0,5s ease, text-decoration 0.3s ease; /* Жестко прописываем плавность перехода */
+}
+
+/* Плавный ховер для любых ссылок и классов */
+a:hover, .contact-link:hover, .link-blue:hover, .link-orange:hover {
+    color: #1c91b7 !important; /* При наведении цвет гарантированно станет белым */
+    text-decoration: underline; /* Появится подчеркивание */
+}
