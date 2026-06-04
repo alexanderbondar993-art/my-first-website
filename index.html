@@ -1,65 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Первый сайт Александра Бондаря</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1> Первый сайт Александра Бондаря</h1>
 
-    <h3>Планы по захвату мира и изучению верстки HTML</h3>
-
-    <p>Хорошо бы все изучить за неделю-две</p>
-
-        <hr> <!-- Это тег горизонтальной линии для разделения блоков -->
-
-    <h3>Интересные ссылки</h3>
-    <p>Полезный ресурс для поиска информации: <a href="https://www.google.com/search?q=&sourceid=chrome&ie=UTF-8&amc=1&udm=50&aep=42&cud=0&qsubts=1780236444018&source=chrome.crn.rb">Google AI</a>.</p>
-<div class="container">
-    
-    <div class="resume-card">
-    <img src="photo.jpg" alt="Моя локальная картинка" width="200">
-    
-    <!-- Основная информация -->
-    <h1>Александр</h1>
-    <p class="subtitle">Начинающий фронтенд-разработчик</p>
-    
-    <hr>
-
-    <!-- Списки и информация -->
-    <h3>Мои навыки за неделю:</h3>
-    <ul>
-        <li>Основы структуры и тегов <span class="badge">HTML5</span></li>
-        <li>Стилизация, классы и Box Model <span class="badge">CSS3</span></li>
-        <li>Понимание работы сети и запросов <span class="badge">HTTP</span></li>
-    </ul>
-
-    <h3>Контакты:</h3>
-    <p>Пишите мне для связи: <a href="https://ya.ru" class="contact-link">Яндекс Почта</a></p>
-</div>
-<!-- КАРТОЧКА 2 (Например, проект или карточка друга) -->
-    <div class="resume-card">
-        <img src="skills.jpg" alt="Моя локальная картинка" width="250">
-        <h1>My skills</h1>
-        <p class="subtitle">Skils and talents</p>
-        <hr>
-        <h3>Technical support requirements:</h3>
-        <ul>
-            <li>Работа с операционными системами: уверенное знание Windows (включая Server), Linux и macOS.</li>
-            <li>Базовая архитектура сетей: понимание принципов работы протоколов TCP/IP, DNS, DHCP, маршрутизации и VPN.</li>
-            <li>Диагностика оборудования: умение выявлять аппаратные и программные сбои, а также заменять комплектующие.</li>
-            <li>Программное обеспечение: администрирование баз данных, систем виртуализации и офисных пакетов (MS Office, Google Workspace).</li>
-            <li>Инструменты автоматизации: использование систем контроля версий (например, Git), знание скриптовых языков (Bash, Python).</li>
-        </ul>
+    <!-- 1. КНОПКА ПЕРЕКЛЮЧЕНИЯ ТЕМЫ (В самом верху по центру) -->
+    <div class="btn-wrapper">
+        <button class="theme-btn">Переключить тему</button>
     </div>
 
-</div> <!-- Конец большого контейнера -->
+    <!-- 2. ПРИВЕТСТВЕННЫЙ ТЕКСТ (Глава сайта) -->
+    <div style="text-align: center; margin-bottom: 30px; padding: 0 20px;">
+        <h1>Первый сайт Александра Бондаря</h1>
+        <h3>Планы по захвату мира и изучению верстки HTML</h3>
+        <p>Хорошо бы все изучить за неделю-две</p>
+        <p>Полезный ресурс для поиска информации: <a href="https://www.google.com/search?q=&sourceid=chrome&ie=UTF-8&amc=1&udm=50&aep=42&cud=0&qsubts=1780236444018&source=chrome.crn.rb">Google AI</a></p>
+        <hr style="max-width: 600px; margin: 20px auto; border: 0; height: 1px; background: #444;">
+    </div>
 
-        <script src="script.js"></script>
-</body>
-</html>
+    <!-- 3. ГЛАВНЫЙ КОНТЕЙНЕР (Управляет только двумя карточками через Flexbox) -->
+    <div class="container">
+
+        <!-- КАРТОЧКА 1: Информация обо мне -->
+        <div class="resume-card">
+            <img src="photo2.png" alt="Моя локальная картинка" class="avatar">
+            <h1>Александр</h1>
+            <p class="subtitle">Начинающий фронтенд-разработчик</p>
+            <hr>
+            <h3>Мои навыки за неделю:</h3>
+            <ul>
+                <li>Основы структуры и тегов <span class="badge">HTML5</span></li>
+                <li>Стилизация, классы и Box Model <span class="badge">CSS3</span></li>
+                <li>Понимание работы сети и запросов <span class="badge">HTTP</span></li>
+            </ul>
+            <h3>Контакты:</h3>
+            <p>Пишите мне для связи: <a href="https://ya.ru" class="contact-link">Яндекс Почта</a></p>
+        </div>
+
+        <!-- КАРТОЧКА 2: Навыки техподдержки -->
+        <div class="resume-card">
+            <img src="skills.jpg" alt="Моя локальная картинка" class="avatar">
+            <h1>My skills</h1>
+            <p class="subtitle">Skills and talents</p>
+            <hr>
+            <h3>Technical support requirements:</h3>
+            <ul>
+                <li>Работа с операционными системами: уверенное знание Windows, Linux и macOS.</li>
+                <li>Базовая архитектура сетей: принципы работы TCP/IP, DNS, DHCP, VPN.</li>
+                <li>Диагностика оборудования: умение выявлять аппаратные и программные сбои.</li>
+                <li>Программное обеспечение: администрирование баз данных и офисных пакетов.</li>
+                <li>Инструменты автоматизации: использование систем контроля версий Git, Bash, Python.</li>
+            </ul>
+        </div>
+
+    </div> <!-- Конец главного контейнера карточек -->
+
+    <!-- Подключение скрипта логики -->
+    <script src="script.js"></script>
 
 </body>
 </html>

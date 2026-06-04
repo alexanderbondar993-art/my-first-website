@@ -37,14 +37,25 @@ body {
 }
 
 /* Стили для изображения (круглый аватар) */
+
+/* Стили для изображения (круглый аватар) */
+/* Стили для изображения (круглый аватар) */
+/* Стили для изображения (аккуратный сглаженный квадрат) */
 .avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; /* Сделает картинку идеально круглой */
-    object-fit: cover; 
-    border: 3px solid #00d2ff; /* Яркая неоновая рамка вокруг фото */
-    margin-bottom: 15px;
+    width: 240px;             
+    height: 240px;            
+    
+    /* Вместо 50% делаем легкое закругление углов, которое не ломает пиксели */
+    border-radius: 16px;       
+    
+    object-fit: cover;        
+    object-position: center;   
+    border: 3px solid #00d2ff; 
+    margin-bottom: 20px;      
 }
+
+
+
 
 /* ==========================================
    3. ТЕКСТ, ЗАГОЛОВКИ И СПИСКИ
@@ -128,3 +139,59 @@ a:hover, .contact-link:hover, .link-blue:hover, .link-orange:hover {
         font-size: 24px; /* Делаем имя чуть меньше, чтобы оно не переносилось некрасиво */
     }
 }
+/* Обёртка, которая центрирует кнопку без растягивания */
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;             /* Растягиваем не кнопку, а невидимый контейнер */
+    margin: 20px 0;          /* Отступы сверху и снизу от карточек */
+}
+
+/* Сама кнопка теперь будет аккуратного размера */
+/* ==========================================
+   6. СТИЛИ КНОПКИ И ОБЁРТКИ
+   ========================================== */
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;             /* Контейнер на всю ширину для центровки */
+    margin: 20px 0;          /* Отступы сверху и снизу */
+}
+
+.theme-btn {
+    background-color: #00d2ff;
+    color: #1e1e24;
+    border: none;
+    padding: 10px 25px;      /* Компактный размер кнопки */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: #ffffff; 
+}
+/* ==========================================
+   7. СТИЛИ ДЛЯ СВЕТЛОЙ ТЕМЫ (ВКЛЮЧАЮТСЯ ИЗ JS)
+   ========================================== */
+body.light-theme {
+    background-color: #f5f7fa; /* Светлый фон */
+    color: #1e1e24;            /* Темный текст */
+}
+
+body.light-theme .resume-card {
+    background-color: #ffffff; /* Белые карточки */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Мягкая светлая тень */
+}
+
+body.light-theme h1, body.light-theme h3 {
+    color: #1e1e24;            /* Черные заголовки */
+}
+
+body.light-theme .theme-btn {
+    background-color: #1e1e24; /* Темная кнопка в светлой теме */
+    color: #ffffff;
+}
+

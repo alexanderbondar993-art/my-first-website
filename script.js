@@ -1,11 +1,19 @@
-// 1. Задаем вопрос пользователю и сохраняем его ответ
-const answer = prompt("Какую технологию мы сейчас изучаем? (Подсказка: 2 буквы)");
+// 1. Находим кнопку и элемент body
+const themeButton = document.querySelector('.theme-btn');
+const bodyElement = document.querySelector('body');
 
-// 2. Проверяем, что ввел пользователь
-if (answer === "JS" || answer === "js" || answer === "Js") {
-    // Если ответ правильный (ввели JS, js или Js)
-    alert("Абсолютно верно! Доступ к сайту разрешен. Приятного просмотра!");
-} else {
-    // Если ответ любой другой
-    alert("Хмм... Почти, но нет! Это JavaScript (или сокращенно JS). Но вы все равно можете посмотреть сайт.");
-}
+// 2. Слушаем клик по кнопке
+themeButton.addEventListener('click', function() {
+    
+    /* Метод toggle — это встроенный переключатель. 
+       Если класса 'light-theme' у body нет — он его добавит (включит светлую тему).
+       Если класс уже есть — он его удалит (вернет темную тему). */
+    bodyElement.classList.toggle('light-theme');
+    
+    // 3. Меняем текст на кнопке в зависимости от текущей темы
+    if (bodyElement.classList.contains('light-theme')) {
+        themeButton.textContent = "Включить темную тему";
+    } else {
+        themeButton.textContent = "Переключить тему";
+    }
+});
